@@ -1,0 +1,250 @@
+@import url("../../../main.scss");
+
+.home {
+  width: 100%;
+  height: 100%;
+  background-color: var(--mian-bg-color);
+  padding: 20px 250px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  &::before {
+    z-index: -1;
+    content: "";
+    position: fixed;
+    top: 0;
+    right: 250px;
+    width: 230px;
+    height: 230px;
+    background: radial-gradient(
+      circle,
+      rgba(255, 255, 255, 0.4) 0%,
+      rgba(255, 255, 255, 0) 70%
+    );
+    filter: blur(50px);
+    z-index: 0;
+  }
+
+  .body {
+    width: 100%;
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    gap: 10px;
+    .left {
+      width: 70%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .right {
+      width: 30%;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}
+
+.btnChatBot {
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 999;
+  cursor: pointer;
+  height: 35px;
+  border-radius: 30px;
+  padding: 0 12px;
+  font-weight: 500;
+  font-size: 14px;
+  color: var(--mian-bg-color);
+  background-color: var(--primary-text-color);
+  border: var(--border-color);
+  display: flex;
+  align-items: center;
+  gap: 3px;
+
+  .chatIcon {
+    font-size: 24px;
+    animation: wiggle ease-in-out infinite 0.5s;
+  }
+}
+
+@keyframes wiggle {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(5deg);
+  }
+  50% {
+    transform: rotate(-5deg);
+  }
+  75% {
+    transform: rotate(5deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+// 🌟 STARS for dark mode
+.starryBackground {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 1;
+
+  .star {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: white;
+    border-radius: 50%;
+    opacity: 0.6;
+    animation: twinkle 2s infinite ease-in-out;
+    filter: drop-shadow(0 0 3px white);
+  }
+}
+
+@keyframes twinkle {
+  0%,
+  100% {
+    opacity: 0.2;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.3);
+  }
+}
+
+.snowflakes {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 1;
+
+  .snowflake {
+    position: absolute;
+    top: -10%;
+    color: #dee5e5cc;
+    animation: fall linear infinite;
+    user-select: none;
+  }
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(110vh);
+  }
+}
+
+//TABLET
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .home {
+    width: 100%;
+    height: 100%;
+    background-color: var(--mian-bg-color);
+    padding: 20px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    &::before {
+      z-index: -1;
+      content: "";
+      position: fixed;
+      top: 0;
+      right: 50px;
+      width: 230px;
+      height: 230px;
+      background: radial-gradient(
+        circle,
+        rgba(255, 255, 255, 0.4) 0%,
+        rgba(255, 255, 255, 0) 70%
+      );
+      filter: blur(50px);
+      z-index: 0;
+    }
+
+    .body {
+      width: 100%;
+      display: flex;
+      align-items: stretch;
+      justify-content: space-between;
+      gap: 10px;
+      .left {
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .right {
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+      }
+    }
+  }
+}
+
+//MOBILE
+@media (max-width: 768px) {
+  .home {
+    width: 100%;
+    height: 100%;
+    background-color: var(--mian-bg-color);
+    padding: 5px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    &::before {
+      z-index: -1;
+      content: "";
+      position: fixed;
+      top: 0;
+      right: 10px;
+      width: 180px;
+      height: 180px;
+      background: radial-gradient(
+        circle,
+        rgba(255, 255, 255, 0.4) 0%,
+        rgba(255, 255, 255, 0) 70%
+      );
+      filter: blur(50px);
+      z-index: 0;
+    }
+
+    .body {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      justify-content: space-between;
+      gap: 10px;
+      .left {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .right {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+      }
+    }
+  }
+}

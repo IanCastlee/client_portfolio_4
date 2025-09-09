@@ -1,0 +1,49 @@
+.section {
+  .expCard {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    justify-content: start;
+    align-items: start;
+    position: relative;
+
+    .line {
+      position: absolute;
+
+      left: 23px;
+      top: 0;
+      height: 100%;
+      border-left: 1px solid var(--button);
+      width: 1px;
+      z-index: 5;
+    }
+    .card {
+      display: flex;
+      align-items: start;
+      gap: 30px;
+      justify-content: start;
+
+      .year {
+        border: 1px solid var(--button);
+        height: 22px;
+        padding: 0 10px;
+        border-radius: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 10px;
+        font-weight: 500;
+        z-index: 12;
+        background-color: var(--cardwrapper-bg-color);
+        color: var(--primary-text-color);
+      }
+
+      .detail {
+        font-size: 14px;
+        color: var(--primary-text-color);
+        line-height: 1.6;
+        font-weight: 400;
+      }
+    }
+  }
+}

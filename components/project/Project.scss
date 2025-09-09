@@ -1,0 +1,116 @@
+.section {
+  .projectWrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px;
+    .projectCard {
+      width: 24%;
+      border: 1px solid var(--border-color);
+      padding: 10px;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: all ease-in-out 0.2s;
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+        h3 {
+          color: green;
+        }
+      }
+
+      .url {
+        margin-top: auto;
+        align-self: flex-end;
+        font-size: 10px;
+        color: rgb(6, 96, 138);
+        display: flex;
+        align-items: center;
+        gap: 5px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .section {
+    .projectWrapper {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 10px;
+      .projectCard {
+        width: 32%;
+        border: 1px solid var(--border-color);
+        padding: 10px;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: all ease-in-out 0.2s;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        &:hover {
+          transform: translateY(-5px);
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+          h3 {
+            color: green;
+          }
+        }
+
+        .url {
+          margin-top: auto;
+          align-self: flex-end;
+          font-size: 10px;
+          color: rgb(6, 96, 138);
+          display: flex;
+          align-items: center;
+          gap: 5px;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 768px) {
+  .section {
+    .projectWrapper {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 10px;
+      .projectCard {
+        width: 48%;
+        border: 1px solid var(--border-color);
+        padding: 10px;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: all ease-in-out 0.2s;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        &:hover {
+          transform: translateY(-5px);
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+          h3 {
+            color: green;
+          }
+        }
+
+        .url {
+          margin-top: auto;
+          align-self: flex-end;
+          font-size: 10px;
+          color: rgb(6, 96, 138);
+          display: flex;
+          align-items: center;
+          gap: 5px;
+        }
+      }
+    }
+  }
+}

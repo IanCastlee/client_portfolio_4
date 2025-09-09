@@ -1,0 +1,46 @@
+.leftBody {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+
+  .section {
+    .cardWrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+
+      .category {
+        display: flex;
+        flex-direction: column;
+
+        .itemWrapper {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 10px;
+
+          span {
+            font-size: 12px;
+            font-weight: 500;
+            border: 1px solid var(--border-color);
+            height: 30px;
+            padding: 0 10px;
+            border-radius: 10px;
+            color: var(--secondary-text-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--mian-bg-color);
+
+            transition: border 0.3s ease, color ease 0.3s;
+
+            &:hover {
+              border: 2px solid rgb(11, 11, 86);
+            }
+          }
+        }
+      }
+    }
+  }
+}

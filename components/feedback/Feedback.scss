@@ -1,0 +1,73 @@
+.section {
+  .cardWrapper {
+    display: flex;
+    overflow-x: scroll;
+    gap: 10px;
+    scroll-behavior: smooth;
+
+    .card {
+      width: 300px;
+      flex: 0 0 auto;
+      padding: 10px;
+      border-radius: 10px;
+      border: 1px solid var(--border-color);
+      display: flex;
+      flex-direction: column;
+      background-color: var(--mian-bg-color);
+
+      .top {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 15px;
+
+        .name {
+          font-size: 14px;
+          font-weight: 700;
+          color: var(--primary-text-color);
+        }
+        .role {
+          font-size: 10px;
+          font-weight: 500;
+          color: var(--primary-text-color);
+        }
+      }
+
+      .readMoreBtn {
+        font-size: 10px;
+        cursor: pointer;
+        color: var(--secondary-text-color);
+        border: none;
+        background-color: transparent;
+        margin-top: auto;
+        align-self: end;
+      }
+    }
+
+    scrollbar-width: none;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  .dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    gap: 8px;
+
+    .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: var(--border-color);
+      cursor: pointer;
+      transition: all 0.3s ease;
+
+      &.active {
+        width: 10px;
+        height: 10px;
+        background-color: var(--primary-text-color);
+      }
+    }
+  }
+}

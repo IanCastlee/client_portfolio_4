@@ -1,0 +1,10 @@
+.footer {
+  flex: 1;
+  background-color: var(--cardwrapper-bg-color);
+  padding: 15px;
+  border-radius: 10px;
+  border: 1px solid var(--border-color);
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+}
