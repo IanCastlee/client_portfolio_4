@@ -113,11 +113,11 @@ function Heading() {
       <div className={styles.botForMobile}>
         <div className={styles.buttonWrapper}>
           <button className={styles.btnEmail}>
-            Send Email
+            Email
             <IoIosArrowRoundForward className={styles.mailButton} />
           </button>
           <button className={styles.btnCV}>
-            Download CV
+            CV
             <GoDownload className={styles.mailButton} />
           </button>
         </div>

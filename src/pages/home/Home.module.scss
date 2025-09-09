@@ -247,4 +247,28 @@
       }
     }
   }
+
+  .btnChatBot {
+    position: fixed;
+    bottom: 20px;
+    right: 10px;
+    z-index: 999;
+    cursor: pointer;
+    height: 35px;
+    border-radius: 30px;
+    padding: 0 12px;
+    font-weight: 500;
+    font-size: 14px;
+    color: var(--mian-bg-color);
+    background-color: var(--primary-text-color);
+    border: var(--border-color);
+    display: flex;
+    align-items: center;
+    gap: 3px;
+
+    .chatIcon {
+      font-size: 24px;
+      animation: wiggle ease-in-out infinite 0.5s;
+    }
+  }
 }

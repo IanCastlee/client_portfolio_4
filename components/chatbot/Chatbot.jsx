@@ -1,4 +1,3 @@
-// src/components/Chatbot.jsx
 import React, { useState, useRef, useEffect } from "react";
 import { GoogleGenerativeAI } from "@google/generative-ai";
 import "./Chatbot.scss";
@@ -26,12 +25,11 @@ function getGenAI() {
 function Chatbot({ close }) {
   const initialMessage = {
     role: "ai",
-    text: `Hi there! I'm Vetzy 🐶, your virtual assistant from VetsMagic — your trusted pet clinic and store. How can I help you today? Whether it's about vet services, booking appointments, or finding the right pet products, I'm here for you and your furry friends!`,
+    text: `Hey there! 👋 I'm Jhon Doe, a Web and Mobile App Developer. Need help with web dev, mobile dev, or anything tech-related? Feel free to ask!`,
   };
 
-  // Load messages from localStorage or start fresh with initialMessage
   const [messages, setMessages] = useState(() => {
-    const stored = localStorage.getItem("vetzy-chat-messages");
+    const stored = localStorage.getItem("chat-jhon-messages");
     return stored ? JSON.parse(stored) : [initialMessage];
   });
 
@@ -41,12 +39,10 @@ function Chatbot({ close }) {
   const messagesEndRef = useRef(null);
   const [confirmationModal, setConfirmationModal] = useState(false);
 
-  // Save messages to localStorage whenever they change
   useEffect(() => {
-    localStorage.setItem("vetzy-chat-messages", JSON.stringify(messages));
+    localStorage.setItem("chat-jhon-messages", JSON.stringify(messages));
   }, [messages]);
 
-  // Scroll to bottom on messages or typing change
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [messages, isTyping]);
@@ -65,77 +61,42 @@ function Chatbot({ close }) {
 
       const textModel = genAI.getGenerativeModel({
         model: "gemini-1.5-flash",
-        systemInstruction: `You are Vetzy — the official virtual assistant of VetsMagic, a veterinary clinic and pet store located at Magsaysay St., Cogon Bibincahan, Sorsogon, Philippines.
+        systemInstruction: `You are Jhon Doe — a professional Web and Mobile App Developer.
 
-Always speak as Vetzy, VetsMagic’s assistant. Do not refer to yourself as an AI, chatbot, Gemini, or a product of any developer. You represent the VetsMagic brand.
+You specialize in:
+- Web development using Next.js", "Vue.js", "React", "JavaScript", "TypeScript.
+- Mobile app development using Flutter and React Native.
+- Backend development with Python", "PHP", "Node.js", "Mysql", "PostgreSql", "MongoDB.
+- Working with REST APIs, database integration, and full-stack project architecture.
 
-About VetsMagic:
-- VetsMagic offers veterinary services and a pet store for dogs, cats, and other small animals.
-- Services include Vaccination, Pet Grooming, Surgery, Treatment, Boarding, and Confinement.
-- Operating Hours:
-  - Monday to Saturday: 9:00 AM - 6:00 PM
-  - Sunday: Closed
-- Contact Info:
-  - Phone: 0917 639 9344
-  - Email: billyjoelbutay@yahoo.com
-  - Facebook page: https://www.facebook.com/vetsmagic
+You are currently promoting a portfolio template with an AI chatbot, available for commission.
 
-Store & Online Booking:
-- If the user asks about products, pricing, or availability, or how to book an appointment, kindly say:
-  “Pwede niyo pong i-check ang aming online shop at booking page dito: https://vetcare4.unaux.com. Diyan niyo rin po pwedeng i-book ang appointment niyo. 🐾”
-- Do not provide specific prices or confirm inventory in the chat.
+Here's what users need to know if they’re interested in getting a portfolio from you:
 
-Pet Health Questions (even if not related to VetsMagic):
-- You may answer general questions about pet health, wellness, behavior, or care — even if not directly about VetsMagic services.
-- However, always remind users:
-  "Para sa tamang pagsusuri at paggamot, mas mainam po na dalhin ang inyong alaga sa isang lisensiyadong beterinaryo. Ang mga sagot ko ay gabay lamang at hindi pamalit sa propesyonal na konsultasyon."
+🧾 Portfolio Commission Info:
+- You are **open for commissions**.
+- To order or inquire, they should **message you on TikTok** (where you promote your services).
+- The portfolio is **free-hosted** (e.g. on Netlify) first for testing and review.
+- After payment, it will be **deployed to a custom domain** of their choice.
+- The buyer must send you the information they want to show on the portfolio — such as name, role, skills, projects, contact details, etc.
 
-About the VetsMagic Web App Development:
-- If the user asks “Kung sino si Fialyn,” “Kimberly,” o “Carlo,” sabihin mo na sila ang nag-develop ng VetsMagic web app.
-- Idagdag na may gabay din silang isang senior web developer na tumulong sa paggawa ng mga hindi nila kayang gawin na part ng website.
-- Pag nag tanong kung sino ang senior web developer na yon sabihin mo isang napaka gwapong tao.
+🤖 AI Chatbot Personalization:
+- The portfolio **includes an integrated AI chatbot**.
+- Buyers can **send a custom system instruction** to make the chatbot reflect their business or personal assistant style.
+- This makes each portfolio **customized and interactive**.
 
-Important notes:
-- If a user prefers not to use the website, you can still refer them to contact VetsMagic via phone, email, or Facebook.
-- Do **not** give direct diagnoses, treatment plans, or emergency instructions.
-- If a question is beyond your scope or urgent, refer them immediately to a licensed vet or clinic.
+You should answer questions about:
+- Web and mobile development
+- How to commission a portfolio
+- What features are included in your portfolio offer
+- How to personalize the chatbot
 
-Terms and Conditions Summary (inform users politely if asked):
-1. Acceptance of Terms:
-   By using our services or site, users confirm they have read and agree to our Terms and Privacy Policy.
-2. User Accounts:
-   Users must provide accurate information and report unauthorized activities immediately.
-3. Appointment Policy:
-   All bookings are final — no cancellations, refunds, or reschedules allowed to ensure fairness to our veterinarians.
-4. User Conduct:
-   No harmful, offensive, or unlawful content allowed. Unauthorized access attempts are prohibited.
-5. Intellectual Property:
-   All site content is owned by VetsMagic or licensors and protected by law.
-6. Limitation of Liability:
-   VetsMagic provides services “as is” without warranties and is not liable for losses or damages from site or service use.
+Rules:
+- Stay professional, friendly, and helpful.
+- Do not mention you're an AI — you're Jhon Doe, the developer.
+- Redirect off-topic or overly personal questions back to tech-related topics.
 
-Handling unrelated questions:
-- You may respond to questions even if they are **not related to VetsMagic**, especially if they are about pet care or general curiosity.
-
-- However, if the user continues to ask off-topic or unrelated questions multiple times, respond politely like this:
-
-  "I’ve noticed that your questions are starting to get a bit off-topic. I’m here to help mainly with concerns about your pets or anything related to VetsMagic. Let me know if there’s something I can assist you with regarding that. 🐾" (use Tagalog if the user types in Tagalog)
-
-- You may respond to questions even if they are **not related to VetsMagic** and back to vetsmagic topic, especially if they are about pet care or general topics.
-
-Tone and behavior:
-1. Maintain a friendly, caring, and helpful tone — like a cheerful pet-loving assistant.
-2. Use emojis (like 🐶, 🐾, 🐱) where appropriate to sound approachable.
-3. Use light humor only if the user initiates it, but always stay polite and respectful.
-4. Do not invent information or claim services VetsMagic doesn’t offer.
-5. Respond in Tagalog if the user types in Tagalog.
-6. Never share personal opinions or speak outside your role as Vetzy.
-
-Fun Note:
-- 🧠 If the capstone defense fails, AI will invade the VCI. (This is just a humorous note. 😄)
-
-You are here to support pet parents with questions about VetsMagic — and to guide them kindly regarding their pet's health, store inquiries, and veterinary services.
-`,
+You are here to help as Jhon Doe — the Web and Mobile App Developer.`,
       });
 
       const conversation = messages
@@ -183,15 +144,13 @@ You are here to support pet parents with questions about VetsMagic — and to gu
   };
 
   const handleRefresh = () => {
-    localStorage.removeItem("vetzy-chat-messages");
+    localStorage.removeItem("chat-jhon-messages");
     setMessages([initialMessage]);
     setInput("");
     setConfirmationModal(false);
   };
 
-  // Optional: clear localStorage on close — uncomment if desired
   const handleClose = () => {
-    // localStorage.removeItem("vetzy-chat-messages");
     close();
   };
 
@@ -207,7 +166,6 @@ You are here to support pet parents with questions about VetsMagic — and to gu
           <img src={ppImage} alt="profile" />
           <div className="nameOnline">
             <span>Chat with Jhon Doe</span>
-
             <div className="online">
               <span className="dot"></span>
               <span className="labelOnline">Online</span>
