@@ -16,18 +16,17 @@ function LeftBody() {
         </h2>
 
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi vitae
-          sequi repellat at id ab autem cum alias, fuga inventore mollitia, eos
-          vero enim! <br />
+          Hi! I'm <strong>Jhon Doe</strong>, a Web and Mobile App Developer with
+          a passion for building modern, responsive, and user-friendly digital
+          experiences. I specialize in creating custom portfolio websites that
+          are not only visually appealing but also come with a built-in{" "}
+          <strong>AI chatbot</strong> tailored to your business or personal
+          needs. <br />
           <br />
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto
-          ratione quos blanditiis commodi saepe ullam quia quisquam voluptatem.
-          Quo voluptate obcaecati aspernatur ad autem. Voluptatibus consectetur
-          consequatur nihil odit minima. <br />
-          <br />
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur
-          laudantium quod voluptatem labore necessitatibus debitis omnis dicta
-          itaque quam! Voluptatum?
+          If you're interested in having your own portfolio, feel free to
+          message me on TikTok. I offer{" "}
+          <strong>free initial hosting and domain setup</strong> — just send me
+          the information you want included.
         </p>
       </div>
 
