@@ -19,7 +19,7 @@
         padding: 0 15px;
       }
     }
-    .cardWrapper {
+    .cardWrapperV {
       width: 100%;
       display: flex;
       flex-direction: column;
@@ -31,7 +31,6 @@
         padding: 10px;
         border-radius: 10px;
         width: 100%;
-
         .title {
           font-size: 14px;
           font-weight: 500;
@@ -79,7 +78,7 @@
           padding: 0 15px;
         }
       }
-      .cardWrapper {
+      .cardWrapperV {
         width: 100%;
         display: flex;
         flex-direction: column;

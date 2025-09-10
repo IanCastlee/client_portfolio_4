@@ -3,9 +3,36 @@ import { GoInfo } from "react-icons/go";
 import { VscTools } from "react-icons/vsc";
 
 const techStack = {
-  frontend: ["Next.js", "Vue.js", "React", "JavaScript", "TypeScript"],
-  backend: ["Python", "PHP", "Node.js", "Mysql", "PostgreSql", "MongoDB"],
+  frontend: [
+    "JavaScript",
+    "TypeScript",
+    "React",
+    "Next.js",
+    "Vue.js",
+
+    "Tailwind CSS",
+    "Bootstrap",
+    "Redux",
+  ],
+  backend: [
+    "Node.js",
+    "Express.js",
+    "Python",
+
+    "Flask",
+    "PHP",
+    "Laravel",
+    "Java",
+    "Rust",
+    "MySQL",
+    "PostgreSQL",
+    "MongoDB",
+    "Redis",
+    "Firebase",
+    "GraphQL",
+  ],
 };
+
 function LeftBody() {
   return (
     <div className="leftBody">
@@ -16,17 +43,15 @@ function LeftBody() {
         </h2>
 
         <p>
-          Hi! I'm <strong>Jhon Doe</strong>, a Web and Mobile App Developer with
-          a passion for building modern, responsive, and user-friendly digital
-          experiences. I specialize in creating custom portfolio websites that
-          are not only visually appealing but also come with a built-in{" "}
-          <strong>AI chatbot</strong> tailored to your business or personal
-          needs. <br />
+          Hi! I'm Jhon Doe, a Web and Mobile App Developer with a passion for
+          building modern, responsive, and user-friendly digital experiences. I
+          specialize in creating custom portfolio websites that are not only
+          visually appealing but also come with a built-in AI chatbot tailored
+          to your business or personal needs. <br />
           <br />
           If you're interested in having your own portfolio, feel free to
-          message me on TikTok. I offer{" "}
-          <strong>free initial hosting and domain setup</strong> — just send me
-          the information you want included.
+          message me on TikTok. I offer free initial hosting and domain setup —
+          just send me the information you want included.
         </p>
       </div>
 
@@ -41,8 +66,8 @@ function LeftBody() {
             <h3>Frontend</h3>
 
             <div className="itemWrapper">
-              {techStack.frontend.map((item) => {
-                return <span>{item}</span>;
+              {techStack.frontend.map((item, index) => {
+                return <span key={index}>{item}</span>;
               })}
             </div>
           </div>
@@ -50,8 +75,8 @@ function LeftBody() {
             <h3>Backend</h3>
 
             <div className="itemWrapper">
-              {techStack.backend.map((item) => {
-                return <span>{item}</span>;
+              {techStack.backend.map((item, index) => {
+                return <span key={index}>{item}</span>;
               })}
             </div>
           </div>

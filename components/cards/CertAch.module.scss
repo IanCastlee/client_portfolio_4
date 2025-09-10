@@ -1,0 +1,64 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--card-bg-color);
+  padding: 10px;
+  border-radius: 10px;
+  width: 100%;
+  border: 1px solid var(--border-color);
+
+  &.viewCard {
+    max-width: fit-content;
+  }
+
+  .title {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--secondary-text-color);
+  }
+
+  .issuer {
+    color: var(--secondary-text-color);
+    font-size: 10px;
+  }
+  .event {
+    color: var(--secondary-text-color);
+    font-size: 10px;
+  }
+  .year {
+    color: var(--secondary-text-color);
+    font-size: 10px;
+    margin-top: 5px;
+  }
+}
+
+@media (max-width: 768px) {
+  .card {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--card-bg-color);
+    padding: 10px;
+    border-radius: 10px;
+    width: 100%;
+
+    .title {
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--secondary-text-color);
+    }
+
+    .issuer {
+      color: var(--secondary-text-color);
+      font-size: 10px;
+    }
+    .event {
+      color: var(--secondary-text-color);
+      font-size: 10px;
+    }
+    .year {
+      color: var(--secondary-text-color);
+      font-size: 10px;
+      margin-top: 5px;
+    }
+  }
+}

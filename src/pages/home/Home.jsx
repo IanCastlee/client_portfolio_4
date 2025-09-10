@@ -1,5 +1,4 @@
 import { IoChatbubblesOutline } from "react-icons/io5";
-import { IoSnowOutline } from "react-icons/io5";
 import Heading from "../../../components/heading/Heading";
 import LeftBody from "../../../components/leftbody/LeftBody";
 import RightBody from "../../../components/rightbody/RightBody";
@@ -9,9 +8,9 @@ import { useState, useContext } from "react";
 import { DarkModeContext } from "../../../context/Darkmode";
 import { GiDandelionFlower } from "react-icons/gi";
 import Project from "../../../components/project/Project";
-import CertAchievement from "../../../components/certAchievement.jsx/CertAchievement";
 import Feedback from "../../../components/feedback/Feedback";
 import Footer from "../../../components/footer/Footer";
+import CertAchievement from "../../../components/certAchievement/CertAchievement";
 
 function Home() {
   const [toggleChatbot, setToggleChatbot] = useState(false);

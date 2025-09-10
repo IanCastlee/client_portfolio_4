@@ -3,7 +3,10 @@
   padding: 0;
   box-sizing: border-box;
 
-  font-family: "Montserrat", sans-serif;
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+
+  font-variation-settings: "wdth" 100;
 }
 
 .section {
@@ -33,4 +36,36 @@ p {
   color: var(--primary-text-color);
   line-height: 1.6;
   font-weight: 400;
+}
+
+.readMoreBtn {
+  font-size: 10px;
+  cursor: pointer;
+  color: var(--secondary-text-color);
+  border: none;
+  background-color: transparent;
+  margin-top: auto;
+  align-self: end;
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.btnAll {
+  background-color: transparent;
+  border: none;
+  color: var(--primary-text-color);
+  cursor: pointer;
+  font-size: 12px;
+  padding: 0 15px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.viewAllIcon {
+  font-size: 1.125rem;
 }

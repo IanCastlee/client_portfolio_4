@@ -2,14 +2,13 @@
   .expCard {
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 18px;
     justify-content: start;
     align-items: start;
     position: relative;
 
     .line {
       position: absolute;
-
       left: 23px;
       top: 0;
       height: 100%;
@@ -20,7 +19,7 @@
     .card {
       display: flex;
       align-items: start;
-      gap: 30px;
+      gap: 20px;
       justify-content: start;
 
       .year {

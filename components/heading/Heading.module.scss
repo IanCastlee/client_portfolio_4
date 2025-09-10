@@ -3,7 +3,7 @@
 
   padding: 15px;
   border-radius: 10px;
-  border: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
   z-index: 2;
   .heading {
     width: 100%;
@@ -199,7 +199,7 @@
   .headingWrapper {
     width: 100%;
     border-radius: 10px;
-    border: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
     z-index: 2;
     .heading {
       width: 100%;
@@ -217,7 +217,7 @@
     flex-direction: column;
     padding: 10px;
     border-radius: 10px;
-    border: 1px solid var(--border-color);
+    border: none;
     z-index: 2;
     .heading {
       width: 100%;

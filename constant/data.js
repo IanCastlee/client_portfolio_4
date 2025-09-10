@@ -1,9 +1,71 @@
-import { GoProjectSymlink } from "react-icons/go";
-import "./CertAchievement.scss";
-import { GrAchievement } from "react-icons/gr";
-import { LiaCertificateSolid } from "react-icons/lia";
+//projects
+export const projects = [
+  {
+    name: "TaskTrek",
+    shortDesc:
+      "A collaborative to-do list and project management app with real-time updates.",
+    url: "tasktrek.app",
+  },
+  {
+    name: "MealMate",
+    shortDesc:
+      "A meal planning app that suggests recipes based on what's in your fridge.",
+    url: "mealmate.io",
+  },
+  {
+    name: "BudgetWise",
+    shortDesc:
+      "Personal finance tracker with visual analytics and savings goals.",
+    url: "budgetwise.app",
+  },
+  {
+    name: "StudySync",
+    shortDesc:
+      "A virtual study room where students can co-work and track focus time together.",
+    url: "studysync.live",
+  },
+  {
+    name: "EventNest",
+    shortDesc:
+      "A modern event planning platform with RSVP management and calendar syncing.",
+    url: "eventnest.co",
+  },
+  {
+    name: "FitFocus",
+    shortDesc:
+      "A fitness tracker and goal planner with progress analytics and challenges.",
+    url: "fitfocus.fit",
+  },
+  {
+    name: "LangLeap",
+    shortDesc:
+      "A language learning web app with gamified lessons and speech recognition.",
+    url: "langleap.org",
+  },
+  {
+    name: "Artfolio",
+    shortDesc:
+      "A portfolio builder for artists to showcase their work with integrated store.",
+    url: "artfolio.design",
+  },
 
-const certs = [
+  //
+  {
+    name: "LangLeap",
+    shortDesc:
+      "A language learning web app with gamified lessons and speech recognition.",
+    url: "langleap.org",
+  },
+  {
+    name: "Artfolio",
+    shortDesc:
+      "A portfolio builder for artists to showcase their work with integrated store.",
+    url: "artfolio.design",
+  },
+];
+
+//certs
+export const certs = [
   {
     name: "Responsive Web Design",
     issuer: "freeCodeCamp",
@@ -56,7 +118,8 @@ const certs = [
   },
 ];
 
-const achievements = [
+//achievements
+export const achievements = [
   {
     title: "1st Place - HackFest 2024",
     event: "HackFest by DevCon PH",
@@ -128,55 +191,3 @@ const achievements = [
     url: "",
   },
 ];
-
-function CertAchievement() {
-  return (
-    <div className="certAchievement">
-      <div className="section">
-        <div className="header">
-          <h2>
-            <LiaCertificateSolid className="titleIcon" />
-            Certificates
-          </h2>
-
-          <button className="btnAll">All</button>
-        </div>
-
-        <div className="cardWrapper">
-          {certs.slice(0, 5).map((item, index) => {
-            return (
-              <div className="card" key={index}>
-                <span className="title">{item.name}</span>
-                <span className="issuer">{item.issuer}</span>
-              </div>
-            );
-          })}
-        </div>
-      </div>
-      <div className="section">
-        <div className="header">
-          <h2>
-            <GrAchievement className="titleIcon" />
-            Achievements
-          </h2>
-
-          <button className="btnAll">All</button>
-        </div>
-
-        <div className="cardWrapper">
-          {achievements.slice(0, 4).map((item, index) => {
-            return (
-              <div className="card" key={index}>
-                <span className="title">{item.title}</span>
-                <span className="event">{item.event}</span>
-                <span className="year">{item.year}</span>
-              </div>
-            );
-          })}
-        </div>
-      </div>
-    </div>
-  );
-}
-
-export default CertAchievement;

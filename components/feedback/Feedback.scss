@@ -13,7 +13,7 @@
       border: 1px solid var(--border-color);
       display: flex;
       flex-direction: column;
-      background-color: var(--mian-bg-color);
+      background-color: var(--card-bg-color);
 
       .top {
         display: flex;
@@ -30,16 +30,6 @@
           font-weight: 500;
           color: var(--primary-text-color);
         }
-      }
-
-      .readMoreBtn {
-        font-size: 10px;
-        cursor: pointer;
-        color: var(--secondary-text-color);
-        border: none;
-        background-color: transparent;
-        margin-top: auto;
-        align-self: end;
       }
     }
 

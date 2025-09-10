@@ -35,6 +35,21 @@ function Heading() {
   const handleMouseUp = () => setIsPressed(false);
   const handleMouseLeave = () => setIsPressed(false);
 
+  const handleDownload = () => {
+    const link = document.createElement("a");
+    link.href = "../../public/TESTRESUME.pdf";
+    link.download = "TESTRESUME.pdf";
+    link.click();
+  };
+
+  const handleSendEmail = () => {
+    const email = "your@gmail.com";
+    const subject = encodeURIComponent("Question About Your Services");
+    const body = encodeURIComponent("Hello, I would like to ask about...");
+
+    window.location.href = `mailto:${email}?subject=${subject}&body=${body}`;
+  };
+
   return (
     <div className={styles.headingWrapper}>
       <div className={styles.heading}>
@@ -91,11 +106,11 @@ function Heading() {
           </div>
           <div className={styles.bot}>
             <div className={styles.buttonWrapper}>
-              <button className={styles.btnEmail}>
+              <button onClick={handleSendEmail} className={styles.btnEmail}>
                 Send Email
                 <IoIosArrowRoundForward className={styles.mailButton} />
               </button>
-              <button className={styles.btnCV}>
+              <button onClick={handleDownload} className={styles.btnCV}>
                 Download CV
                 <GoDownload className={styles.mailButton} />
               </button>
@@ -112,11 +127,11 @@ function Heading() {
       </div>
       <div className={styles.botForMobile}>
         <div className={styles.buttonWrapper}>
-          <button className={styles.btnEmail}>
+          <button onClick={handleSendEmail} className={styles.btnEmail}>
             Email
             <IoIosArrowRoundForward className={styles.mailButton} />
           </button>
-          <button className={styles.btnCV}>
+          <button onClick={handleDownload} className={styles.btnCV}>
             CV
             <GoDownload className={styles.mailButton} />
           </button>
