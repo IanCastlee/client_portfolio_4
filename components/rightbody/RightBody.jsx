@@ -1,33 +1,17 @@
 import { HiOutlineLightBulb } from "react-icons/hi";
 import "./RightBody.scss";
 import { PiLightbulbFilamentLight } from "react-icons/pi";
-
-const experience = [
-  {
-    year: "2025",
-    details: "Led full-stack development of analytics dashboard at PixelForge.",
-  },
-  {
-    year: "2024",
-    details: "Built e-commerce backend with Express and MongoDB.",
-  },
-  {
-    year: "2023",
-    details: "Optimized frontend performance at DevStream using React.",
-  },
-  {
-    year: "2022",
-    details: "Contributed to SaaS platform using Vue and Firebase.",
-  },
-  {
-    year: "2021",
-    details: "Interned at ByteCore, wrote unit tests and API docs.",
-  },
-];
+import { motion } from "framer-motion";
+import { experience } from "../../constant/data";
 
 function RightBody() {
   return (
-    <div className="section">
+    <motion.div
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+      className="section"
+    >
       <h2>
         <PiLightbulbFilamentLight className="titleIcon" />
         Experience
@@ -45,7 +29,7 @@ function RightBody() {
           );
         })}
       </div>
-    </div>
+    </motion.div>
   );
 }
 

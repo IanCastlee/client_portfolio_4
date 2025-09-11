@@ -1,61 +1,40 @@
 import "./LeftBody.scss";
 import { GoInfo } from "react-icons/go";
 import { VscTools } from "react-icons/vsc";
-
-const techStack = {
-  frontend: [
-    "JavaScript",
-    "TypeScript",
-    "React",
-    "Next.js",
-    "Vue.js",
-
-    "Tailwind CSS",
-    "Bootstrap",
-    "Redux",
-  ],
-  backend: [
-    "Node.js",
-    "Express.js",
-    "Python",
-
-    "Flask",
-    "PHP",
-    "Laravel",
-    "Java",
-    "Rust",
-    "MySQL",
-    "PostgreSQL",
-    "MongoDB",
-    "Redis",
-    "Firebase",
-    "GraphQL",
-  ],
-};
-
+import { motion } from "framer-motion";
+import { techStack } from "../../constant/data";
 function LeftBody() {
   return (
     <div className="leftBody">
-      <div className="section">
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        className="section"
+      >
         <h2>
           <GoInfo className="titleIcon" />
           About
         </h2>
 
         <p>
-          Hi! I'm Jhon Doe, a Web and Mobile App Developer with a passion for
+          Hi! I'm Dev Shot, a Web and Mobile App Developer with a passion for
           building modern, responsive, and user-friendly digital experiences. I
           specialize in creating custom portfolio websites that are not only
           visually appealing but also come with a built-in AI chatbot tailored
           to your business or personal needs. <br />
           <br />
           If you're interested in having your own portfolio, feel free to
-          message me on TikTok. I offer free initial hosting and domain setup —
-          just send me the information you want included.
+          message me.
         </p>
-      </div>
+      </motion.div>
 
-      <div className="section">
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        className="section"
+      >
         <h2>
           <VscTools className="titleIcon" />
           Tech Stack
@@ -81,7 +60,7 @@ function LeftBody() {
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 }

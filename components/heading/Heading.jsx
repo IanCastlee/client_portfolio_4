@@ -63,7 +63,7 @@ function Heading() {
           <div className={styles.top}>
             <div className={styles.nameToggleButton}>
               <h1>
-                Jhon Doe <MdVerified className={styles.verifiedIcon} />
+                Dev Shot <MdVerified className={styles.verifiedIcon} />
               </h1>
 
               <button

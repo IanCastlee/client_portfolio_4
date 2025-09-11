@@ -1,7 +1,7 @@
 import { LuSquareArrowOutUpRight } from "react-icons/lu";
 import "./ProjectCard.scss";
 import { useState } from "react";
-
+import { motion } from "framer-motion";
 function ProjectCard({ item, index }) {
   const [expanded, setExpanded] = useState({});
   const toggleExpand = (index) => {
@@ -12,7 +12,13 @@ function ProjectCard({ item, index }) {
   const isExpanded = expanded[index];
 
   return (
-    <div className="projectCard" key={index}>
+    <motion.div
+      initial={{ opacity: 0, y: 10 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, delay: index * 0.2 }}
+      className="projectCard"
+      key={index}
+    >
       <h3>{item.name}</h3>
       <p>
         {isLong && !isExpanded
@@ -29,7 +35,7 @@ function ProjectCard({ item, index }) {
       <span className="url">
         {item.url} <LuSquareArrowOutUpRight />
       </span>
-    </div>
+    </motion.div>
   );
 }
 

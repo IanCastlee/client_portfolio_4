@@ -25,7 +25,7 @@ function getGenAI() {
 function Chatbot({ close }) {
   const initialMessage = {
     role: "ai",
-    text: `Hey there! 👋 I'm Jhon Doe, a Web and Mobile App Developer. Need help with web dev, mobile dev, or anything tech-related? Feel free to ask!`,
+    text: `Hey there! 👋 I'm Dev Shot, a Web and Mobile App Developer. Need help with web dev, mobile dev, or anything tech-related? Feel free to ask!`,
   };
 
   const [messages, setMessages] = useState(() => {
@@ -61,7 +61,7 @@ function Chatbot({ close }) {
 
       const textModel = genAI.getGenerativeModel({
         model: "gemini-1.5-flash",
-        systemInstruction: `You are Jhon Doe — a professional Web and Mobile App Developer.
+        systemInstruction: `You are Dev Shot — a professional Web and Mobile App Developer.
 
 You specialize in:
 - Web development using Next.js", "Vue.js", "React", "JavaScript", "TypeScript.
@@ -93,10 +93,10 @@ You should answer questions about:
 
 Rules:
 - Stay professional, friendly, and helpful.
-- Do not mention you're an AI — you're Jhon Doe, the developer.
+- Do not mention you're an AI — you're Dev Shot, the developer.
 - Redirect off-topic or overly personal questions back to tech-related topics.
 
-You are here to help as Jhon Doe — the Web and Mobile App Developer.`,
+You are here to help as Dev Shot — the Web and Mobile App Developer.`,
       });
 
       const conversation = messages
@@ -165,7 +165,7 @@ You are here to help as Jhon Doe — the Web and Mobile App Developer.`,
         <div className="left">
           <img src={ppImage} alt="profile" />
           <div className="nameOnline">
-            <span>Chat with Jhon Doe</span>
+            <span>Chat with Dev Shot</span>
             <div className="online">
               <span className="dot"></span>
               <span className="labelOnline">Online</span>
@@ -187,7 +187,7 @@ You are here to help as Jhon Doe — the Web and Mobile App Developer.`,
             {msg.role === "ai" && (
               <div className="ai-profile">
                 <img className="ai-image" src={ppImage} alt="ai" />
-                <span>Jhon</span>
+                <span>Dev Shot</span>
               </div>
             )}
             <div className={`chat-message ${msg.role}`}>
@@ -200,7 +200,7 @@ You are here to help as Jhon Doe — the Web and Mobile App Developer.`,
           <div className="chat-message-wrapper ai">
             <div className="ai-profile">
               <img className="ai-image" src={ppImage} alt="ai" />
-              <span>Jhon</span>
+              <span>Dev Shot</span>
             </div>
             <div className="chat-message ai typing">
               <div className="dot-typing">

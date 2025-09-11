@@ -191,3 +191,59 @@ export const achievements = [
     url: "",
   },
 ];
+
+//tech stack
+export const techStack = {
+  frontend: [
+    "JavaScript",
+    "TypeScript",
+    "React",
+    "Next.js",
+    "Vue.js",
+
+    "Tailwind CSS",
+    "Bootstrap",
+    "Redux",
+  ],
+  backend: [
+    "Node.js",
+    "Express.js",
+    "Python",
+
+    "Flask",
+    "PHP",
+    "Laravel",
+    "Java",
+    "Rust",
+    "MySQL",
+    "PostgreSQL",
+    "MongoDB",
+    "Redis",
+    "Firebase",
+    "GraphQL",
+  ],
+};
+
+//experience
+export const experience = [
+  {
+    year: "2025",
+    details: "Led full-stack development of analytics dashboard at PixelForge.",
+  },
+  {
+    year: "2024",
+    details: "Built e-commerce backend with Express and MongoDB.",
+  },
+  {
+    year: "2023",
+    details: "Optimized frontend performance at DevStream using React.",
+  },
+  {
+    year: "2022",
+    details: "Contributed to SaaS platform using Vue and Firebase.",
+  },
+  {
+    year: "2021",
+    details: "Interned at ByteCore, wrote unit tests and API docs.",
+  },
+];
