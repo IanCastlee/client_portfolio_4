@@ -84,7 +84,7 @@ function Home() {
         onClick={() => setToggleChatbot(true)}
       >
         <IoChatbubblesOutline className={styles.chatIcon} />
-        Chat with Jhon
+        Chat with Dev Shot
       </button>
 
       {toggleChatbot && <Chatbot close={() => setToggleChatbot(false)} />}
