@@ -37,9 +37,11 @@ function Heading() {
 
   const handleDownload = () => {
     const link = document.createElement("a");
-    link.href = "../../public/TESTRESUME.pdf";
+    link.href = "/TESTRESUME.pdf";
     link.download = "test_resume_cv.pdf";
+    document.body.appendChild(link);
     link.click();
+    document.body.removeChild(link);
   };
 
   const handleSendEmail = () => {
